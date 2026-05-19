@@ -13,6 +13,9 @@ public class Usuario {
         this.viewMinutes = viewMinutes;
     }
 
+    public Usuario() {
+    }
+
     public int getViewMinutes() {
         return viewMinutes;
     }
@@ -50,7 +53,11 @@ public class Usuario {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        if (cpf.length() == 9) {
+            this.cpf = cpf;
+        } else {
+            System.out.println("CPF inválido! Digite exatamente 9 dígitos.");
+        }
     }
 
 }

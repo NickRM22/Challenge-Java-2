@@ -11,6 +11,9 @@ public class Ticket {
         this.usuario = usuario;
     }
 
+    public Ticket() {
+    }
+
     public int getTickets() {
         return tickets;
     }
