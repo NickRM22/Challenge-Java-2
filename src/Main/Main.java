@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  *
  * @author Nicolas Martins, Nicolas Frazao, Vinicius Soares, Henrique Soares, Caua Bordini
- * @version 1.1
+ * @version 1.2
  * @since 1.0
  *
  */
@@ -26,12 +26,13 @@ public class Main {
         usuario2.setUserName(sc.nextLine());
         System.out.println("Digite sua senha: ");
         usuario2.setPassword(sc.nextLine());
-        System.out.println("Digite sua cpf (apenas números): ");
+        System.out.println("Digite seu CPF (apenas números): ");
         usuario2.setCpf(sc.nextLine());
         System.out.println("\nCADASTRADO COM SUCESSO!");
         System.out.println("========== PONTUAÇÃO E CONVERSÃO ==========");
-        System.out.println("Digite sua tempo assistido: ");
+        System.out.println("Digite seu tempo assistido: ");
         usuario2.setViewMinutes(sc.nextInt());
+        sc.nextLine();
         App app = new App(usuario2, points, ticket);
         System.out.println("Seu total de pontos: " + app.conversionViewsForPoints());
         System.out.println("Suas passagens: " + app.conversionPointsToTickets());
